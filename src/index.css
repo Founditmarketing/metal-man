@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Oswald:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Oswald", sans-serif;
+  --font-arial-black: "Arial Black", "Helvetica Neue", sans-serif;
+  
+  --color-construction-yellow: #FDB813;
+  --color-industrial-navy: #001A33;
+  --color-metal-silver: #C0C0C0;
+  --color-metal-dark: #333333;
+}
+
+@layer base {
+  body {
+    @apply bg-industrial-navy text-white font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading uppercase tracking-wider;
+    font-family: var(--font-arial-black);
+  }
+}
+
+@layer utilities {
+  .bg-caution-stripes {
+    background: repeating-linear-gradient(
+      45deg,
+      #FDB813,
+      #FDB813 10px,
+      #000000 10px,
+      #000000 20px
+    );
+  }
+  
+  .brushed-metal {
+    background: radial-gradient(circle at top left, #002b55, #001A33);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .industrial-border {
+    border: 4px solid #000;
+  }
+
+  .btn-primary-industrial {
+    @apply bg-construction-yellow text-black font-bold uppercase cursor-pointer border-none;
+    border-bottom: 4px solid #b8860b;
+    transition: all 0.1s active;
+  }
+  
+  .btn-primary-industrial:active {
+    border-bottom-width: 0;
+    transform: translateY(4px);
+  }
+
+  .btn-ghost-industrial {
+    @apply border-2 border-construction-yellow text-construction-yellow bg-transparent uppercase cursor-pointer font-bold;
+    transition: all 0.2s;
+  }
+  
+  .btn-ghost-industrial:hover {
+    @apply bg-construction-yellow text-black border-black;
+  }
+
+  .form-input-industrial {
+    @apply bg-white/5 border border-white/20 text-white placeholder-white/40 font-sans;
+  }
+
+  .form-input-industrial:focus {
+    @apply border-construction-yellow/50 outline-none;
+  }
+}

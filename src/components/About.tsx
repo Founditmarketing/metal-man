@@ -63,10 +63,9 @@ export default function About() {
           >
             <div className="industrial-border border-construction-yellow/30 overflow-hidden relative shadow-2xl rounded-none">
               <img 
-                src="https://picsum.photos/seed/structural-assembly/800/1000" 
+                src="/metal building.png" 
                 alt="The Metal Man Infrastructure" 
-                className="w-full h-full object-cover grayscale brightness-50 contrast-125 transition-all duration-700 hover:scale-110 hover:grayscale-0"
-                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover transition-all duration-700 hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
               <div className="absolute top-0 right-0 w-16 h-16 bg-caution-stripes opacity-40" />

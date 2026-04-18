@@ -15,7 +15,7 @@ export default function AboutPage() {
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-5xl sm:text-8xl font-black uppercase mb-6"
+              className="text-5xl sm:text-7xl font-black uppercase mb-6"
             >
               The <span className="text-construction-yellow">Metal Man</span>
             </motion.h1>
@@ -43,10 +43,9 @@ export default function AboutPage() {
               <div className="space-y-8">
                 <div className="industrial-border border-black overflow-hidden relative shadow-2xl skew-x-1">
                   <img 
-                    src="https://picsum.photos/seed/legacy-steel/800/1000" 
+                    src="/gallery1.png" 
                     alt="The Metal Man Legacy" 
-                    className="w-full h-[600px] object-cover grayscale brightness-50 contrast-125"
-                    referrerPolicy="no-referrer"
+                    className="w-full h-[600px] object-cover transition-all duration-700 hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-industrial-navy to-transparent opacity-60" />
                   <div className="absolute bottom-10 left-10">

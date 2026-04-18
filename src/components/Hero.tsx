@@ -9,10 +9,9 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://picsum.photos/seed/industrial-steel-building/1920/1080?grayscale" 
+          src="/gallery1.png" 
           alt="Industrial Steel Structure" 
           className="w-full h-full object-cover brightness-[0.2] contrast-125"
-          referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-tr from-industrial-navy via-industrial-navy/80 to-transparent" />
       </div>

@@ -17,14 +17,14 @@ function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
-    "https://picsum.photos/seed/metal1/1200/1200",
-    "https://picsum.photos/seed/metal2/1200/1200",
-    "https://picsum.photos/seed/metal3/1200/1200",
-    "https://picsum.photos/seed/metal4/1200/1200",
-    "https://picsum.photos/seed/metal5/1200/1200",
-    "https://picsum.photos/seed/metal6/1200/1200",
-    "https://picsum.photos/seed/metal7/1200/1200",
-    "https://picsum.photos/seed/metal8/1200/1200",
+    "/gallery1.png",
+    "/gallery2.png",
+    "/gallery3.png",
+    "/garage.png",
+    "/barn.png",
+    "/carport.png",
+    "/gallery8.png",
+    "/gallery5.png",
   ];
 
   return (
@@ -49,8 +49,7 @@ function Gallery() {
               <img 
                 src={src} 
                 alt={`Gallery image ${idx + 1}`}
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 scale-110 group-hover:scale-100"
-                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover transition-all duration-500 scale-110 group-hover:scale-100"
               />
               <div className="absolute inset-0 bg-construction-yellow/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none flex items-center justify-center">
                 <span className="text-white font-black uppercase text-[10px] tracking-widest bg-black/60 px-3 py-1 scale-90 group-hover:scale-100 transition-transform">Enlarge View</span>
@@ -88,7 +87,6 @@ function Gallery() {
                   src={selectedImage} 
                   alt="Enlarged Project View" 
                   className="w-full h-auto max-h-[80vh] object-contain"
-                  referrerPolicy="no-referrer"
                 />
               </div>
               

@@ -12,18 +12,20 @@ export default function GalleryPage() {
   }, []);
 
   const images = [
-    { src: "https://picsum.photos/seed/metal1/1200/1200", title: "Agricultural Complex", location: "Cartersville, GA" },
-    { src: "https://picsum.photos/seed/metal2/1200/1200", title: "Custom Barndominium Shell", location: "Pensacola, FL" },
-    { src: "https://picsum.photos/seed/metal3/1200/1200", title: "Triple-Wide RV Cover", location: "Albuquerque, NM" },
-    { src: "https://picsum.photos/seed/metal4/1200/1200", title: "Industrial Storage Unit", location: "Jackson, MS" },
-    { src: "https://picsum.photos/seed/metal5/1200/1200", title: "Steel Horse Barn", location: "Ocala, FL" },
-    { src: "https://picsum.photos/seed/metal6/1200/1200", title: "Clear-Span Garage", location: "Mobile, AL" },
-    { src: "https://picsum.photos/seed/metal7/1200/1200", title: "Commercial Equipment Shed", location: "Macon, GA" },
-    { src: "https://picsum.photos/seed/metal8/1200/1200", title: "Metal Pergola Installation", location: "Tucson, AZ" },
-    { src: "https://picsum.photos/seed/metal9/1200/1200", title: "Triple-Section Warehouse", location: "Savannah, GA" },
-    { src: "https://picsum.photos/seed/metal10/1200/1200", title: "RV Luxury Garage", location: "Destin, FL" },
-    { src: "https://picsum.photos/seed/metal11/1200/1200", title: "Open-Side Hay Storage", location: "Valdosta, GA" },
-    { src: "https://picsum.photos/seed/metal12/1200/1200", title: "Custom Shop Frame-Out", location: "Lubbock, TX" },
+    { src: "/gallery1.png", title: "Steel Frame Structure", location: "Cartersville, GA" },
+    { src: "/gallery2.png", title: "Custom Barndominium Shell", location: "Pensacola, FL" },
+    { src: "/gallery3.png", title: "Triple-Wide RV Cover", location: "Albuquerque, NM" },
+    { src: "/gallery4.png", title: "Industrial Storage Unit", location: "Jackson, MS" },
+    { src: "/gallery5.png", title: "Metal Pergola Installation", location: "Ocala, FL" },
+    { src: "/gallery6.png", title: "Clear-Span Garage", location: "Mobile, AL" },
+    { src: "/gallery7.png", title: "Commercial Equipment Shed", location: "Macon, GA" },
+    { src: "/gallery8.png", title: "Outdoor Living Structure", location: "Tucson, AZ" },
+    { src: "/metal building.png", title: "Agricultural Complex", location: "Savannah, GA" },
+    { src: "/gallery10.png", title: "Metal Barn Build", location: "Destin, FL" },
+    { src: "/gallery11.png", title: "Open-Side Hay Storage", location: "Valdosta, GA" },
+    { src: "/gallery12.png", title: "Custom Shop Frame-Out", location: "Lubbock, TX" },
+    { src: "/gallery13.png", title: "Carport Installation", location: "Atlanta, GA" },
+    { src: "/gallery14.png", title: "RV Protection Cover", location: "Tampa, FL" },
   ];
 
   return (
@@ -61,7 +63,7 @@ export default function GalleryPage() {
                 <img 
                   src={img.src} 
                   alt={img.title}
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                  className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
                   referrerPolicy="no-referrer"
                 />
                 

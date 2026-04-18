@@ -67,7 +67,7 @@ export default function LeadForm({ standalone = false }: { standalone?: boolean 
             type="submit" 
             className="btn-primary-industrial w-full py-4 text-sm tracking-widest"
           >
-            Submit Specifications
+            Submit
           </button>
         </form>
       ) : (

@@ -88,10 +88,15 @@ export default function ServicePage() {
             >
               <div className="industrial-border border-black overflow-hidden relative shadow-2xl">
                 <img 
-                  src={`https://picsum.photos/seed/${service.id}-detail/800/1000?grayscale`} 
+                  src={
+                    service.id === 'buildings' ? '/metal building.png' :
+                    service.id === 'barns' ? '/barn2.png' :
+                    service.id === 'carports' ? '/carport2.png' :
+                    service.id === 'garages' ? '/garage2.png' :
+                    '/gallery5.png'
+                  }
                   alt={service.title} 
                   className="w-full h-[400px] object-cover contrast-125 brightness-75"
-                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60" />
                 <div className="absolute bottom-6 left-6">
@@ -108,9 +113,9 @@ export default function ServicePage() {
                 </p>
                 <Link 
                   to="/#contact" 
-                  className="btn-primary-industrial w-full py-4 text-center inline-block group"
+                  className="btn-primary-industrial w-full py-4 text-center inline-block group tracking-wide"
                 >
-                  Start Configuration <ArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform" />
+                  Get a Quote <ArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </motion.div>

@@ -11,48 +11,35 @@ export default function ContactPage() {
       <Navbar />
       
       <main className="pt-32">
-        {/* Header Section */}
-        <section className="py-24 px-10 border-b border-white/5 relative overflow-hidden">
-          <div className="max-w-7xl mx-auto relative z-10 text-center lg:text-left">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+        {/* Header Section — Compact */}
+        <section className="py-10 px-10 border-b border-white/5 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
               <div>
-                <motion.h2 
+                <motion.p
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  className="text-sm font-black text-construction-yellow tracking-[0.3em] mb-4 uppercase"
+                  className="text-xs font-black text-construction-yellow tracking-[0.3em] mb-2 uppercase"
                 >
                   TECHNICAL CONSULTATION
-                </motion.h2>
+                </motion.p>
                 <motion.h1 
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1 }}
-                  className="text-5xl sm:text-7xl font-black uppercase leading-none mb-8"
+                  className="text-3xl sm:text-4xl font-black uppercase leading-none"
                 >
                   Contact The <span className="text-construction-yellow">Metal Man</span>
                 </motion.h1>
-                <motion.p 
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 }}
-                  className="text-xl text-white/60 font-sans leading-relaxed max-w-xl"
-                >
-                  Ready to deploy your next structural steel project? Reach out to our technical team for custom engineering, site-specific quotes, and coordination across the United States.
-                </motion.p>
               </div>
-              
-              <div className="grid grid-cols-2 gap-4">
-                <div className="p-8 bg-black/40 border border-white/10 space-y-4">
-                  <TrendingUp className="text-construction-yellow" size={32} />
-                  <p className="font-black text-2xl uppercase leading-none">300+ Crews</p>
-                  <p className="text-white/40 text-xs font-sans">Ready for Deployment</p>
-                </div>
-                <div className="p-8 bg-black/40 border border-white/10 space-y-4">
-                  <ShieldCheck className="text-construction-yellow" size={32} />
-                  <p className="font-black text-2xl uppercase leading-none">Direct Log</p>
-                  <p className="text-white/40 text-xs font-sans">Project Transparency</p>
-                </div>
-              </div>
+              <motion.p 
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 }}
+                className="text-sm text-white/50 font-sans leading-relaxed max-w-sm"
+              >
+                Ready to deploy your next structural steel project? Reach out for custom quotes and project coordination.
+              </motion.p>
             </div>
           </div>
           <div className="absolute top-0 right-0 w-1/3 h-full bg-caution-stripes opacity-5 -skew-x-12 translate-x-1/2" />

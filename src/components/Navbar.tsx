@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 import { NAV_LINKS, BRAND, SERVICE_CATEGORIES } from '../constants';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -40,8 +40,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-10">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-black text-white tracking-widest flex items-center">
-              THE <span className="text-construction-yellow mx-2">METAL</span> MAN
+            <Link to="/" className="flex items-center">
+              <img
+                src="/The-Metal-Man-logo.png"
+                alt="The Metal Man Logo"
+                className="h-14 w-auto object-contain"
+              />
             </Link>
           </div>
           
@@ -63,6 +67,15 @@ export default function Navbar() {
                 )}
               </div>
             ))}
+
+            {/* Call Button - Desktop */}
+            <a
+              href={`tel:${BRAND.phone}`}
+              className="flex items-center gap-2 bg-construction-yellow text-black px-5 py-2.5 font-black uppercase text-[12px] tracking-widest border-b-4 border-black hover:bg-white transition-colors group"
+            >
+              <Phone size={14} className="group-hover:animate-bounce" />
+              {BRAND.phone}
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -152,10 +165,19 @@ export default function Navbar() {
                   </Link>
                 );
               })}
-              <div className="pt-4 border-t border-white/10">
+              <div className="pt-4 border-t border-white/10 space-y-3">
+                {/* Call Button - Mobile */}
+                <a
+                  href={`tel:${BRAND.phone}`}
+                  className="flex items-center justify-center gap-3 w-full bg-construction-yellow text-black px-6 py-4 font-black uppercase tracking-widest border-b-4 border-black text-lg"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Phone size={20} />
+                  {BRAND.phone}
+                </a>
                 <Link 
                   to="/contact"
-                  className="block w-full text-center bg-construction-yellow text-black px-6 py-4 font-bold uppercase tracking-widest border-b-4 border-black"
+                  className="block w-full text-center bg-transparent text-construction-yellow border-2 border-construction-yellow px-6 py-3 font-bold uppercase tracking-widest hover:bg-construction-yellow hover:text-black transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   Free Quote
